@@ -27,7 +27,7 @@ foreach ($file in $files) {
    # Desktop
    mkdir "$tgtDesk/$folder/" -Force;
    $Shortcut = $Shell.CreateShortcut("$tgtDesk/$folder/" + $filename.Replace("_", " ") + ".lnk");
-   $Shortcut.IconLocation = $tgtProg + $file.BaseName + ".ico";
-   $Shortcut.TargetPath = $tgtProg + $file.BaseName + ".rdp";
+   $Shortcut.IconLocation = "C:\Program Files\VapElite\" + $file.BaseName + ".ico";
+   $Shortcut.TargetPath = "C:\Program Files\VapElite\" + $file.BaseName + ".rdp";
    $Shortcut.Save();
 }
